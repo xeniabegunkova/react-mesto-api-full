@@ -1,0 +1,14 @@
+.content {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 67px;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-bottom: 48px;
+    }
+}

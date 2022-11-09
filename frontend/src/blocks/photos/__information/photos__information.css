@@ -1,0 +1,13 @@
+.photos__information {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 21px;
+    margin-right: 15px;
+    margin-bottom: 31px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 246px;
+}

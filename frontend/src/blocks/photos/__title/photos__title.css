@@ -1,0 +1,15 @@
+.photos__title {
+    margin: 0;
+    padding: 0;
+    flex-basis: 75%;
+    color:#000000;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    z-index: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 25px;
+}

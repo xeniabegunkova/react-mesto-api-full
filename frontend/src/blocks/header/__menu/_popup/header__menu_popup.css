@@ -1,0 +1,9 @@
+.header__menu_popup {
+    display: none;
+}
+
+@media screen and (max-width: 1073px) {
+    .header__menu_popup {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+.auth__sing-up_link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+.auth__sing-up_link:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

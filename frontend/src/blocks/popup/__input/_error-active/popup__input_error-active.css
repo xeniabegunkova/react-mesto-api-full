@@ -1,0 +1,12 @@
+.popup__input_error-active {
+  opacity: 1;
+  margin-left: 36px;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__input_error-active {
+    width: 240px;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+}

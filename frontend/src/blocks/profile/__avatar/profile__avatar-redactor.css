@@ -1,0 +1,27 @@
+.profile__avatar-redactor {
+    background-image: url(./../../../img/pen.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+    opacity: 0;
+}
+
+.profile__avatar-redactor:hover {
+    opacity: 0.8;
+    background-color: black;
+    background-size: 26px 26px;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 1073px) {
+    .profile__avatar-redactor {
+        left: 81px;
+    }
+}

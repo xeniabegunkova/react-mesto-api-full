@@ -1,0 +1,15 @@
+.header__context {
+    display: flex;
+    padding-right: 27px;
+    height: 22px;
+}
+
+@media screen and (max-width: 1073px) {
+    .header__context {
+        display: none;
+    }
+}
+
+.header__context:last-child {
+    padding-right: 0;
+}

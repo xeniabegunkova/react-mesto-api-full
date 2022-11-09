@@ -1,0 +1,19 @@
+.photos {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-gap: 20px 17px;  
+}
+
+@media screen and (max-width: 980.2px) {
+    .photos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 0;
+        margin: auto;
+        align-items: center;
+    }
+    }

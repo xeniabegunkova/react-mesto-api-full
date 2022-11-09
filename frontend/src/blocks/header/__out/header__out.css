@@ -1,0 +1,14 @@
+.header__out {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+}
+
+.header__out:hover {
+    color: #A9A9A9;
+}

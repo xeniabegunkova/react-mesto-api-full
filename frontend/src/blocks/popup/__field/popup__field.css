@@ -1,0 +1,14 @@
+.popup__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__field:last-of-type {
+    margin-bottom: 13px;
+}
+
+@media (max-width: 767px) {
+    .popup__field:last-of-type {
+        margin-bottom: 11px;
+    }
+}
