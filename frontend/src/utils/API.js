@@ -17,7 +17,7 @@ class API {
 
     _getHeaders() {
         return {
-            authorization: `Bearer ${this._token}`,
+            authorization: `Bearer ${localStorage.getItem('jwt')}`,
             'Content-Type': 'application/json',
         }
     }
@@ -88,5 +88,5 @@ class API {
     }
 }
 
-const api = new API ('http://localhost:3001')
+const api = new API ('https://ksenia.students.nomoredomains.icu')
 export default api

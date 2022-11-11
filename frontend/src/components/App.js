@@ -40,6 +40,8 @@ function App() {
       api.getInitialCards(),
     ])
       .then(([data, cards]) => {
+        console.log(data)
+        console.log(cards)
         setCurrentUser(data);
 
         setCards(cards.data);
@@ -50,7 +52,7 @@ function App() {
   }, [loggedIn])
 
   useEffect(() => {
-    const jwt = localStorage.getItem('token');
+    const jwt = localStorage.getItem('jwt');
     if (jwt) {
       auth.checkToken(jwt)
         .then((res) => {
@@ -65,7 +67,7 @@ function App() {
   }, [history])
 
   useEffect(() => {
-    const jwt = localStorage.getItem('token');
+    const jwt = localStorage.getItem('jwt');
     if (jwt) {
       auth.checkToken(jwt)
         .then((res) => {
@@ -77,7 +79,7 @@ function App() {
           console.log(err);
         })
     }
-  }, [])
+  }, [history.location])
 
   function handleEditAvatarClick() {
     setAvatarPopupOpen(true)
@@ -151,6 +153,7 @@ function App() {
   };
 
   function handleUpdateUser(data) {
+    console.log(data)
     setIsLoading(true);
     api.setUserData(data.name, data.about)
       .then((data) => {
@@ -196,7 +199,6 @@ function App() {
   }
 
   function handleRegistration(email, password) {
-    console.log(email)
     auth.register(email, password)
       .then((data) => {
         if (data) {
@@ -215,7 +217,6 @@ function App() {
   function handleLogin(email, password) {
     auth.login(email, password)
       .then((data) => {
-        console.log(data.token)
         if (data.token) {
           localStorage.setItem('jwt', data.token);
           setEmail(email);
@@ -230,7 +231,7 @@ function App() {
   }
 
   function handleLogOut() {
-    localStorage.removeItem('token');
+    localStorage.removeItem('jwt');
     setLoggedIn(false);
     history.push('/sign-in');
     setMenuOpen(!isMenuOpen)
