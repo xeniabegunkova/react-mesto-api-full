@@ -10,6 +10,8 @@ const NotFound = require('../errors/NotFound');
 const Conflict = require('../errors/Conflict');
 const BadReq = require('../errors/BadRequest');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 const createUser = (req, res, next) => {
   bcrypt.hash(req.body.password, 7)
     .then((hash) => User.create({
@@ -113,7 +115,7 @@ const login = (req, res, next) => {
         .then(() => {
           const token = jwt.sign(
             { _id: user._id },
-            'secret-key',
+            NODE_ENV === 'production' ? JWT_SECRET : 'secret-key',
             { expiresIn: '7d' },
           );
           res.cookie('jwt', token, {
